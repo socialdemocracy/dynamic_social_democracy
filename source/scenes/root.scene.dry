@@ -32,8 +32,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1918;
+Q.month = 12;
 Q.week = 0;
 Q.week_checked = 0;
 // how many actions have been taken this month?
@@ -61,20 +61,18 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist', 'social_patriot'];
+Q.factions = ['sammlung', 'linksliberale', 'pazifisten', 'nationalliberale', 'republikschutzer'];
 // should this be normalized to 100%?
-Q.left_strength = 15;
-Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
-Q.social_patriot_strength = 0
-Q.social_patriot_dissent = 0;
+Q.nationalliberale_strength = 20;
+Q.sammlung_strength = 30;
+Q.linksliberale_strength = 40;
+Q.pazifisten_strength = 10;
+Q.republikschutzer_strength = 0; // gains strength (from linksliberale/pazifisten) when discovered
+Q.nationalliberale_dissent = 12;
+Q.sammlung_dissent = 5;
+Q.linksliberale_dissent = 10;
+Q.pazifisten_dissent = 12;
+Q.republikschutzer_dissent = 0; // irrelevant pre-discovery
 
 // secret events...
 Q.unions_independent = 0;
@@ -127,7 +125,7 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.z_relation = 50;
 Q.kpd_relation = 25;
-Q.ddp_relation = 60;
+Q.spd_relation = 60;
 Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.dnvp_relation = 5;
@@ -1020,48 +1018,34 @@ for (let i = 0; i <= 100; i++) {
     Q[`flavour_${i}_trigger_time`] = 0;
 }
 
-// all the initial advisors are centrists.
-Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
-Q.muller_dead = 0;
-// okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
-Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+// Sammlung advisors
+Q.koch_weser_advisor = 1; // Erich Koch-Weser 
+Q.gessler_advisor = 0;    // Otto Geßler 
+Q.kulz_advisor = 0;       // Wilhelm Külz 
+Q.maier_advisor = 0;      // Reinhold Maier 
 
-// left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+// Linksliberale advisors
+Q.heuss_advisor = 1;      // Theodor Heuss
+Q.baeumer_advisor = 0;    // Gertrud Bäumer
+Q.erkelenz_advisor = 0;   // Anton Erkelenz
+Q.luders_advisor = 0;     // Marie-Elisabeth Lüders 
+Q.bernhard_advisor = 0;   // Georg Bernhard 
+Q.lemmer_advisor = 0;     // Ernst Lemmer 
 
-// centrist alternate advisors
-Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+// Nationalliberale advisors
+Q.dietrich_advisor = 1;   // Hermann Dietrich 
+Q.meyer_advisor = 0;      // Oscar Meyer 
+Q.hopker_aschoff_advisor = 0; // Hermann Höpker-Aschoff 
+Q.stolper_advisor = 0;    // Gustav Stolper 
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
-Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+// Pazifisten advisors
+Q.quidde_advisor = 0;     // Ludwig Quidde 
 
-// Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
-Q.woytinsky_advisor = 0; // Wladimir Woytinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
+// Republikschützer advisors (locked until faction discovered)
+Q.luth_advisor = 0;       // Erich Lüth 
 
-// Revisionist advisors
-Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)
-
-Q.leber_advisor = 0; // Julius Leber (post-1930)
-Q.schumacher_advisor = 0; // Kurt Schumacher (post-1930)
-Q.wirth_advisor = 0; // troll
-
-// Nonfactional advisors
-Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
-Q.radbruch_advisor = 0; // Gustav Radbruch
-Q.stampfer_advisor = 0; // Friedrich Stampfer
+// Nonfactional/technocratic advisors
+Q.abegg_advisor = 0;      // Wilhelm Abegg
 
 if (Q.achievement_holy_moly) {
     const content = document.getElementById('content');
@@ -1569,4 +1553,4 @@ new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 
-= 1928
+= 1918
