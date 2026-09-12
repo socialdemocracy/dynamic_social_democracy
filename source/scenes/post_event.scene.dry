@@ -5241,7 +5241,7 @@ go-to: bg_change if rubicon; events_choice if has_event = 1 and not rubicon; mai
 = [+ month : month +] [+ year +][? if rubicon:, Week [+ week +]?]
 
 @bg_change
-set-bg: img/street.jpg
+set-bg: img/protest.jpg
 go-to: events_choice if has_event = 1; main if has_event = 0 and difficulty >= 0; main.main_easy if has_event = 0 and difficulty < 0
 
 @events_choice
