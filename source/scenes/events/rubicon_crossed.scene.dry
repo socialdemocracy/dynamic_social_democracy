@@ -1,5 +1,5 @@
 title: The Rubicon is Crossed
-subtitle: The fate of Germany rests in President Hindenburg.
+subtitle: The dictatorship is gone, and new elections are to be held.
 view-if: chancellor = "Papen" and president == "Hindenburg" and papen_time == 1
 priority: 3
 new-page: true
@@ -110,7 +110,7 @@ on-display: {!
     var contentDiv = document.querySelector("#page #mid_panel #content");
     contentDiv.appendChild(cardEl);
 !}
-set-bg: img/street.jpg
+set-bg: img/protest.jpeg
 audio: music/1930_1933/Backroom_Deal.ogg
 achievement: sturm_und_drang
 go-to: rubicon_crossing
