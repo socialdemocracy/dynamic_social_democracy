@@ -104,7 +104,7 @@ on-display: {!
 
     var image = new Image();  
     image.className = "face-img";  
-    image.src = "img/hindie.jpg";  
+    image.src = "img/cabinete_juan_manuel_galvez.jpeg";  
 
     cardEl.appendChild(image);  
     var contentDiv = document.querySelector("#page #mid_panel #content");
@@ -117,9 +117,9 @@ go-to: rubicon_crossing
 
 = The Rubicon is Crossed
 
-With the dismissal of Brüning’s government—despite its parliamentary majority—the foundations of democracy are crumbling before our eyes.
+There seemingly is now a return to democracy as the "Cariato" dictatorship has folded in from international pressure, and now, we are finally having long awaited elections. 
 
-Whatever path Hindenburg takes now will be chosen not by the people, but by those who whisper in his ear.
+However, these elections are neither free nor fair, and many in our party have been calling for us to boycott them. New elections are scheduled for October 1948, Week 2.
 
 Time slows. We enter the week-by-week struggle.
 
