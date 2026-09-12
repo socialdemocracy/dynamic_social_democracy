@@ -5,6 +5,7 @@ priority: 3
 new-page: true
 tags: event
 max-visits: 1
+face-image: img/cabinete_juan_manuel_galvez.jpeg
 on-arrival: {!
 Q.rubicon = 1; 
 Q.week = 1;
@@ -98,18 +99,6 @@ window.changeTab('status.emergency', 'emergency_tab')
 dendryUI.audioPlaylist = []
 
 !}
-on-display: {!  
-    var cardEl = document.createElement('div');  
-    cardEl.className = "face-figure2";  
-
-    var image = new Image();  
-    image.className = "face-img";  
-    image.src = "img/cabinete_juan_manuel_galvez.jpeg";  
-
-    cardEl.appendChild(image);  
-    var contentDiv = document.querySelector("#page #mid_panel #content");
-    contentDiv.appendChild(cardEl);
-!}
 set-bg: img/protest.jpeg
 audio: music/1930_1933/Backroom_Deal.ogg
 achievement: sturm_und_drang
@@ -117,9 +106,9 @@ go-to: rubicon_crossing
 
 = The Rubicon is Crossed
 
-There seemingly is now a return to democracy as the "Cariato" dictatorship has folded in from international pressure, and now, we are finally having long awaited elections. 
+There seemingly is now a return to democracy as the "<span style="color: #007DBC;">Cariato</span>" dictatorship has folded in from international pressure, and now, we are finally having long awaited elections. 
 
-However, these elections are neither free nor fair, and many in our party have been calling for us to boycott them. New elections are scheduled for October 1948, Week 2.
+However, these elections are neither free nor fair, and many in our party have been calling for us to boycott said elections, leading to a automatic <span style="color: #007DBC;">**PNH**</span> majority. New elections are scheduled for October 1948, Week 2.
 
 Time slows. We enter the week-by-week struggle.
 
